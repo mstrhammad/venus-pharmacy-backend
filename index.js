@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const { readDB, writeDB, nextId } = require("./db");
 
 const app = express();
-const port = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -239,6 +239,6 @@ app.delete("/sales/:id", (req, res) => {
   res.json({ removed, medicine });
 });
 
-app.listen(port, () => {
-  console.log(`Venus Pharmacy backend listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Venus Pharmacy backend listening on port ${PORT}`);
 });
