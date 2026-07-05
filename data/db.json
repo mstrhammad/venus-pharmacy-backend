@@ -1,0 +1,42 @@
+{
+  "medicines": [
+    {
+      "id": 4,
+      "name": "getryl",
+      "mg": "50",
+      "price": 500,
+      "quantity": 40
+    }
+  ],
+  "purchases": [
+    {
+      "id": 1,
+      "medicineId": 4,
+      "name": "getryl",
+      "mg": "50",
+      "qty": 50,
+      "price": 500,
+      "discount": 30,
+      "amount": 17500,
+      "date": "2026-07-05T21:21:32.343Z"
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "medicineId": 4,
+      "name": "getryl",
+      "mg": "50",
+      "qty": 10,
+      "price": 500,
+      "discount": 80,
+      "amount": 1000,
+      "date": "2026-07-05T21:21:55.230Z"
+    }
+  ],
+  "nextIds": {
+    "medicines": 5,
+    "purchases": 2,
+    "sales": 2
+  }
+}
