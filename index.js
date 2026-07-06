@@ -5,12 +5,11 @@ const { readDB, writeDB, nextId } = require("./db");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
 app.use(cors());
 app.use(bodyParser.json());
 
-const ADMIN_EMAIL = "test@123.com";
-const ADMIN_PASSWORD = "test123";
+const ADMIN_EMAIL = "mstrhammad0321@gmail.com";
+const ADMIN_PASSWORD = "mstrhammad0321";
 
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
@@ -237,6 +236,9 @@ app.delete("/sales/:id", (req, res) => {
 
   writeDB(db);
   res.json({ removed, medicine });
+});
+app.get("/", (req, res) => {
+  res.send("Venus Pharmacy Backend is Running");
 });
 
 app.listen(PORT, () => {
